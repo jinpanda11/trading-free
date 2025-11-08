@@ -29,3 +29,6 @@ with c3:
     st.metric("净手续费", f"¥{net_fee:,.2f}")
 
 st.caption("实时计算 · 手机电脑均可使用")
+
+# 🔗 外链按钮
+st.link_button("访问官网", "https://example.com")
