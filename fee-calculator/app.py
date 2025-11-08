@@ -31,4 +31,5 @@ with c3:
 st.caption("实时计算 · 手机电脑均可使用")
 
 # 🔗 外链按钮
-st.link_button("访问官网", "https://example.com")
+st.link_button("👑WEEX合约70%永久返佣！🚀", "https://www.weex.com/zh-CN/register?vipCode=panda60")
+
