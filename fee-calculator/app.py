@@ -2,6 +2,70 @@ import streamlit as st
 
 st.set_page_config(page_title="合约费率计算器", layout="centered")
 
+# 🌓 夜间模式切换开关
+dark_mode = st.toggle("🌗 切换夜间模式")
+
+# 根据模式动态注入 CSS 样式
+if dark_mode:
+    st.markdown(
+        """
+        <style>
+        body {
+            background-color: #0e1117;
+            color: #ffffff;
+        }
+        .stApp {
+            background-color: #0e1117;
+            color: #ffffff;
+        }
+        .stButton>button {
+            background-color: #1f77b4;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 8px 20px;
+        }
+        .stNumberInput input {
+            background-color: #262730;
+            color: white;
+            border-radius: 8px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+else:
+    st.markdown(
+        """
+        <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+        .stApp {
+            background-color: white;
+            color: black;
+        }
+        .stButton>button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 8px 20px;
+        }
+        .stNumberInput input {
+            background-color: #f0f0f0;
+            color: black;
+            border-radius: 8px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+# ----------------------------
+# 主体内容
+# ----------------------------
 st.title("合约手续费计算器")
 
 col1, col2 = st.columns(2)
@@ -30,11 +94,6 @@ with c3:
 
 st.caption("实时计算 · 手机电脑均可使用")
 st.caption("永久70%比例返佣，算下来费率比币安少一半，无需实名认证，一个邮箱注册即可！每天晚上9点左右自动反前一天的交易手续费，有任何返佣问题可以联系我 TG @panda77581")
+
 # 🔗 外链按钮
-st.link_button("👑WEEX合约70%永久返佣！🚀", "https://www.weex.com/zh-CN/register?vipCode=panda60")
-
-
-
-
-
-
+st.link_button("👑 WEEX合约70%永久返佣！🚀", "https://www.weex.com/zh-CN/register?vipCode=panda60")
