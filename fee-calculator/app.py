@@ -29,7 +29,8 @@ with c3:
     st.metric("净手续费", f"¥{net_fee:,.2f}")
 
 st.caption("实时计算 · 手机电脑均可使用")
-
+st.caption("永久70%比例返佣，算下来费率比币安少一半，无需实名认证，一个邮箱注册即可！每天晚上9点左右自动反前一天的交易手续费，有任何返佣问题可以联系我 微信dji7770，TG @panda77581")
 # 🔗 外链按钮
 st.link_button("👑WEEX合约70%永久返佣！🚀", "https://www.weex.com/zh-CN/register?vipCode=panda60")
+
 
