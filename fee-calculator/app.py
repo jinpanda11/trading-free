@@ -5,7 +5,7 @@ import streamlit as st
 # ---------------------------------------------------
 st.set_page_config(page_title="合约费率计算器", layout="centered")
 
-# 🚫 隐藏 Streamlit 页脚、菜单、GitHub 信息
+# 🚫 隐藏 Streamlit 菜单、页脚、GitHub 链接
 hide_streamlit_style = """
     <style>
     #MainMenu {visibility: hidden;}
@@ -16,10 +16,46 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # ---------------------------------------------------
-# 🌗 夜间模式开关
+# 🌗 自动检测系统主题 + 夜间模式开关
 # ---------------------------------------------------
-dark_mode = st.toggle("🌙 夜间模式", value=True)
+# 注入 JS 自动检测 prefers-color-scheme
+auto_dark_mode_js = """
+<script>
+let prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+if (prefersDark) {
+    window.parent.postMessage({theme: 'dark'}, '*');
+} else {
+    window.parent.postMessage({theme: 'light'}, '*');
+}
+</script>
+"""
+st.markdown(auto_dark_mode_js, unsafe_allow_html=True)
 
+# Streamlit 的 session_state 保存主题
+if "theme" not in st.session_state:
+    st.session_state.theme = "light"
+
+# 根据 JS 消息更新
+theme_placeholder = st.empty()
+theme_placeholder.markdown(
+    """
+    <script>
+    window.addEventListener("message", (event) => {
+        if (event.data.theme) {
+            window.parent.postMessage({setTheme: event.data.theme}, "*");
+        }
+    });
+    </script>
+    """,
+    unsafe_allow_html=True,
+)
+
+# 用户手动切换开关
+dark_mode = st.toggle("🌙 夜间模式", value=False if st.session_state.theme == "light" else True)
+
+# ---------------------------------------------------
+# 🌈 动态样式（字体颜色、背景、按钮）
+# ---------------------------------------------------
 if dark_mode:
     st.markdown(
         """
@@ -28,8 +64,8 @@ if dark_mode:
             background-color: #0e1117 !important;
             color: #e5e5e5 !important;
         }
-        h1, h2, h3, h4, h5, h6, p, label, span, div, .stMarkdown, .stCaption {
-            color: #e5e5e5 !important;
+        h1, h2, h3, h4, h5, h6, label, p, span, div, .stMarkdown, .stCaption {
+            color: #f0f0f0 !important;
         }
         .stNumberInput input {
             background-color: #1a1d29 !important;
@@ -37,12 +73,8 @@ if dark_mode:
             border: 1px solid #333 !important;
             border-radius: 8px !important;
         }
-        [data-testid="stMetricValue"] {
-            color: #ffffff !important;
-        }
-        [data-testid="stMetricLabel"] {
-            color: #bbbbbb !important;
-        }
+        [data-testid="stMetricValue"] { color: #ffffff !important; }
+        [data-testid="stMetricLabel"] { color: #bbbbbb !important; }
         .stMetric {
             background: rgba(255,255,255,0.05);
             padding: 12px;
@@ -62,9 +94,6 @@ if dark_mode:
             transform: scale(1.05);
             background: linear-gradient(90deg, #42a5f5, #64b5f6);
         }
-        .stCaption, .stToggle label {
-            color: #cccccc !important;
-        }
         </style>
         """,
         unsafe_allow_html=True
@@ -77,7 +106,7 @@ else:
             background-color: #fafafa !important;
             color: #000000 !important;
         }
-        h1, h2, h3, h4, h5, h6, p, label, span, div, .stMarkdown, .stCaption {
+        h1, h2, h3, h4, h5, h6, label, p, span, div, .stMarkdown, .stCaption {
             color: #111111 !important;
         }
         .stNumberInput input {
@@ -86,12 +115,8 @@ else:
             border: 1px solid #ccc !important;
             border-radius: 8px !important;
         }
-        [data-testid="stMetricValue"] {
-            color: #000000 !important;
-        }
-        [data-testid="stMetricLabel"] {
-            color: #555555 !important;
-        }
+        [data-testid="stMetricValue"] { color: #000000 !important; }
+        [data-testid="stMetricLabel"] { color: #555555 !important; }
         .stMetric {
             background: rgba(0,0,0,0.05);
             padding: 12px;
@@ -110,9 +135,6 @@ else:
         .stButton>button:hover {
             transform: scale(1.05);
             background: linear-gradient(90deg, #66bb6a, #a5d6a7);
-        }
-        .stCaption, .stToggle label {
-            color: #333333 !important;
         }
         </style>
         """,
@@ -150,7 +172,7 @@ with c3:
 
 st.markdown("---")
 
-st.caption("⚡ 实时计算 · 适配手机与桌面端")
+st.caption("⚡ 实时计算 · 自动检测系统主题 · 响应式布局")
 st.caption("💎 永久70%比例返佣，算下来费率比币安少一半，无需实名认证，一个邮箱注册即可！每天晚上9点自动返前一日手续费，有问题可联系 TG：@panda77581")
 
 # ---------------------------------------------------
