@@ -10,32 +10,43 @@ if dark_mode:
     st.markdown(
         """
         <style>
-        body {
-            background-color: #0e1117;
-            color: #e0e0e0;
+        /* --- 全局背景与文字颜色 --- */
+        body, .stApp {
+            background-color: #0e1117 !important;
+            color: #e5e5e5 !important;
         }
-        .stApp {
-            background: radial-gradient(circle at top left, #111827, #0e1117);
-            color: #ffffff;
+
+        /* --- 标题与文字 --- */
+        h1, h2, h3, h4, h5, h6, p, label, span, div, .stMarkdown, .stCaption {
+            color: #e5e5e5 !important;
         }
-        h1, h2, h3, h4, h5, h6 {
-            color: #f5f5f5;
-        }
+
+        /* --- 数字输入框 --- */
         .stNumberInput input {
-            background-color: #1a1d29;
-            color: #ffffff;
-            border: 1px solid #333;
-            border-radius: 8px;
+            background-color: #1a1d29 !important;
+            color: #ffffff !important;
+            border: 1px solid #333 !important;
+            border-radius: 8px !important;
+        }
+
+        /* --- Metric 样式 --- */
+        [data-testid="stMetricValue"] {
+            color: #ffffff !important;
+        }
+        [data-testid="stMetricLabel"] {
+            color: #bbbbbb !important;
         }
         .stMetric {
             background: rgba(255,255,255,0.05);
             padding: 12px;
             border-radius: 12px;
-            box-shadow: 0 0 12px rgba(0,0,0,0.4);
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
         }
+
+        /* --- 按钮样式 --- */
         .stButton>button {
             background: linear-gradient(90deg, #1e88e5, #42a5f5);
-            color: white;
+            color: white !important;
             border: none;
             border-radius: 10px;
             padding: 10px 24px;
@@ -46,8 +57,10 @@ if dark_mode:
             transform: scale(1.05);
             background: linear-gradient(90deg, #42a5f5, #64b5f6);
         }
-        .stToggle label {
-            color: #ffffff !important;
+
+        /* --- Caption & Toggle --- */
+        .stCaption, .stToggle label {
+            color: #cccccc !important;
         }
         </style>
         """,
@@ -57,22 +70,27 @@ else:
     st.markdown(
         """
         <style>
-        body {
-            background-color: #fafafa;
-            color: #000000;
+        body, .stApp {
+            background-color: #fafafa !important;
+            color: #000000 !important;
         }
-        .stApp {
-            background: radial-gradient(circle at top left, #ffffff, #f5f5f5);
-            color: #000000;
+
+        h1, h2, h3, h4, h5, h6, p, label, span, div, .stMarkdown, .stCaption {
+            color: #111111 !important;
         }
-        h1, h2, h3, h4, h5, h6 {
-            color: #111111;
-        }
+
         .stNumberInput input {
-            background-color: #ffffff;
-            color: #000000;
-            border: 1px solid #ccc;
-            border-radius: 8px;
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            border: 1px solid #ccc !important;
+            border-radius: 8px !important;
+        }
+
+        [data-testid="stMetricValue"] {
+            color: #000000 !important;
+        }
+        [data-testid="stMetricLabel"] {
+            color: #555555 !important;
         }
         .stMetric {
             background: rgba(0,0,0,0.05);
@@ -80,9 +98,10 @@ else:
             border-radius: 12px;
             box-shadow: 0 0 8px rgba(0,0,0,0.1);
         }
+
         .stButton>button {
             background: linear-gradient(90deg, #4caf50, #81c784);
-            color: white;
+            color: white !important;
             border: none;
             border-radius: 10px;
             padding: 10px 24px;
@@ -93,8 +112,9 @@ else:
             transform: scale(1.05);
             background: linear-gradient(90deg, #66bb6a, #a5d6a7);
         }
-        .stToggle label {
-            color: #000000 !important;
+
+        .stCaption, .stToggle label {
+            color: #333333 !important;
         }
         </style>
         """,
