@@ -181,63 +181,12 @@ st.caption("💎 永久70%比例返佣，算下来费率比币安少一半，无
 # ---------------------------------------------------
 # 🔗 外链按钮（带 favicon + 并排 + 动画）
 # ---------------------------------------------------
-st.markdown(
-    """
-    <div style="display:flex; gap:20px; justify-content:center; margin:40px 0; flex-wrap:wrap;">
-        <!-- WEEX 注册按钮 -->
-        <a href="https://www.weex.com/zh-CN/register?vipCode=panda60" target="_blank" style="text-decoration:none;">
-            <button class="link-btn weex">
-                <img src="https://www.weex.com/favicon.ico" alt="WEEX" class="btn-icon">
-                WEEX 70% 永久返佣 立即注册
-            </button>
-        </a>
-
-        <!-- TG 咨询按钮 -->
-        <a href="https://t.me/panda77581" target="_blank" style="text-decoration:none;">
-            <button class="link-btn tg">
-                <img src="https://telegram.org/img/t_logo.png" alt="TG" class="btn-icon">
-                TG 咨询 @panda77581
-            </button>
-        </a>
-    </div>
-
-    <style>
-    .link-btn {
-        font-weight: bold;
-        font-size: 17px;
-        border: none;
-        border-radius: 14px;
-        padding: 14px 24px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 18px rgba(0,0,0,0.2);
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        white-space: nowrap;
-    }
-    .btn-icon {
-        width: 22px;
-        height: 22px;
-        border-radius: 5px;
-        object-fit: contain;
-    }
-    .weex {
-        background: linear-gradient(90deg, #ffb300, #ffca28);
-        color: #000;
-    }
-    .tg {
-        background: linear-gradient(90deg, #229ed9, #40c4ff);
-        color: white;
-    }
-    .link-btn:hover {
-        transform: translateY(-3px) scale(1.03);
-        box-shadow: 0 12px 28px rgba(0,0,0,0.3);
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
+st.link_button(
+    "👑 WEEX合约 70% 永久返佣！",
+    "https://www.weex.com/zh-CN/register?vipCode=panda60",
+    use_container_width=True
 )
+
 
 
 
