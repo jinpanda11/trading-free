@@ -186,6 +186,22 @@ st.link_button(
     "https://www.weex.com/zh-CN/register?vipCode=panda60",
     use_container_width=True
 )
+st.link_button(
+    "👑 WEEX合约 70% 永久返佣！",
+    "https://www.weex.com/zh-CN/register?vipCode=panda60",
+    use_container_width=True
+)
+st.link_button(
+    "👑 WEEX合约 70% 永久返佣！",
+    "https://www.weex.com/zh-CN/register?vipCode=panda60",
+    use_container_width=True
+)
+st.link_button(
+    "👑 WEEX合约 70% 永久返佣！",
+    "https://www.weex.com/zh-CN/register?vipCode=panda60",
+    use_container_width=True
+)
+
 
 
 
