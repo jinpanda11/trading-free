@@ -194,7 +194,7 @@ st.markdown(
                 box-shadow: 0 0 15px rgba(255,193,7,0.4);
                 transition: 0.3s ease-in-out;
             ">
-                👑 WEEX合约 70% 永久返佣！🚀
+                👑 WEEX合约 70%现货50%  不用KYC！🚀
             </button>
         </a>
     </div>
@@ -241,6 +241,52 @@ st.markdown(
                 transition: 0.3s ease-in-out;
             ">
                 👑 bitget现货合约各20%返佣🚀
+            </button>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown(
+    """
+    <div style="text-align:center; margin-top: 20px;">
+        <a href="https://www.ourbit.com/zh-TW/register?inviteCode=panda50" target="_blank" style="text-decoration:none;">
+            <button style="
+                background: linear-gradient(90deg, #ffb300, #ffca28);
+                color: black;
+                font-weight: bold;
+                border: none;
+                border-radius: 12px;
+                padding: 12px 30px;
+                font-size: 17px;
+                cursor: pointer;
+                box-shadow: 0 0 15px rgba(255,193,7,0.4);
+                transition: 0.3s ease-in-out;
+            ">
+                👑 Ourbit 现货合约都是50%返佣 不用KYC🚀
+            </button>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown(
+    """
+    <div style="text-align:center; margin-top: 20px;">
+        <a href="http://www.htx.com.pk/invite/zh-cn/1h?invite_code=rfqi6223" target="_blank" style="text-decoration:none;">
+            <button style="
+                background: linear-gradient(90deg, #ffb300, #ffca28);
+                color: black;
+                font-weight: bold;
+                border: none;
+                border-radius: 12px;
+                padding: 12px 30px;
+                font-size: 17px;
+                cursor: pointer;
+                box-shadow: 0 0 15px rgba(255,193,7,0.4);
+                transition: 0.3s ease-in-out;
+            ">
+                👑 火币30%合约现货返佣🚀
             </button>
         </a>
     </div>
