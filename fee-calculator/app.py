@@ -180,166 +180,61 @@ st.caption("💎 永久70%比例返佣，算下来费率比币安少一半，无
 # ---------------------------------------------------
 st.markdown(
     """
-    <div style="text-align:center; margin:30px 0;">
+    <div style="display:flex; gap:15px; justify-content:center; margin:30px 0; flex-wrap:wrap;">
+        <!-- WEEX 按钮 -->
         <a href="https://www.weex.com/zh-CN/register?vipCode=panda60" target="_blank" style="text-decoration:none;">
-            <button style="
-                background: linear-gradient(90deg, #ffb300, #ffca28);
-                color: #000;
-                font-weight: bold;
-                font-size: 18px;
-                border: none;
-                border-radius: 14px;
-                padding: 14px 20px 14px 14px;
-                cursor: pointer;
-                box-shadow: 0 6px 20px rgba(255,193,7,0.3);
-                transition: all 0.3s ease;
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-            ">
-                <img src="https://api.cryptojobslist.com/company/logo/weex.jpeg" alt="WEEX" style="width:40px; height:40px; border-radius:4px;">
-                WEEX 70% 永久返佣 立即注册
+            <button class="link-btn weex">
+                <img src="https://www.weex.com/favicon.ico" alt="WEEX" class="btn-icon">
+                WEEX 注册 (70% 返佣)
+            </button>
+        </a>
+        
+        <!-- TG 按钮 -->
+        <a href="https://t.me/panda77581" target="_blank" style="text-decoration:none;">
+            <button class="link-btn tg">
+                <img src="https://telegram.org/img/t_logo.png" alt="TG" class="btn-icon">
+                TG 咨询 @panda77581
             </button>
         </a>
     </div>
+
+    <style>
+    .link-btn {
+        font-weight: bold;
+        font-size: 16px;
+        border: none;
+        border-radius: 12px;
+        padding: 12px 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+    }
+    .btn-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+    }
+    .weex {
+        background: linear-gradient(90deg, #ffb300, #ffca28);
+        color: #000;
+    }
+    .tg {
+        background: linear-gradient(90deg, #229ed9, #40c4ff);
+        color: white;
+    }
+    .link-btn:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    </style>
     """,
     unsafe_allow_html=True
 )
-st.markdown(
-    """
-    <div style="text-align:center; margin:30px 0;">
-        <a href="https://www.weex.com/zh-CN/register?vipCode=panda60" target="_blank" style="text-decoration:none;">
-            <button style="
-                background: linear-gradient(90deg, #ffb300, #ffca28);
-                color: #000;
-                font-weight: bold;
-                font-size: 18px;
-                border: none;
-                border-radius: 14px;
-                padding: 14px 20px 14px 14px;
-                cursor: pointer;
-                box-shadow: 0 6px 20px rgba(255,193,7,0.3);
-                transition: all 0.3s ease;
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-            ">
-                <img src="https://api.cryptojobslist.com/company/logo/weex.jpeg" alt="WEEX" style="width:40px; height:40px; border-radius:4px;">
-                WEEX 70% 永久返佣 立即注册
-            </button>
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown(
-    """
-    <div style="text-align:center; margin:30px 0;">
-        <a href="https://www.weex.com/zh-CN/register?vipCode=panda60" target="_blank" style="text-decoration:none;">
-            <button style="
-                background: linear-gradient(90deg, #ffb300, #ffca28);
-                color: #000;
-                font-weight: bold;
-                font-size: 18px;
-                border: none;
-                border-radius: 14px;
-                padding: 14px 20px 14px 14px;
-                cursor: pointer;
-                box-shadow: 0 6px 20px rgba(255,193,7,0.3);
-                transition: all 0.3s ease;
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-            ">
-                <img src="https://api.cryptojobslist.com/company/logo/weex.jpeg" alt="WEEX" style="width:40px; height:40px; border-radius:4px;">
-                WEEX 70% 永久返佣 立即注册
-            </button>
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown(
-    """
-    <div style="text-align:center; margin:30px 0;">
-        <a href="https://www.weex.com/zh-CN/register?vipCode=panda60" target="_blank" style="text-decoration:none;">
-            <button style="
-                background: linear-gradient(90deg, #ffb300, #ffca28);
-                color: #000;
-                font-weight: bold;
-                font-size: 18px;
-                border: none;
-                border-radius: 14px;
-                padding: 14px 20px 14px 14px;
-                cursor: pointer;
-                box-shadow: 0 6px 20px rgba(255,193,7,0.3);
-                transition: all 0.3s ease;
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-            ">
-                <img src="https://api.cryptojobslist.com/company/logo/weex.jpeg" alt="WEEX" style="width:40px; height:40px; border-radius:4px;">
-                WEEX 70% 永久返佣 立即注册
-            </button>
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown(
-    """
-    <div style="text-align:center; margin:30px 0;">
-        <a href="https://www.weex.com/zh-CN/register?vipCode=panda60" target="_blank" style="text-decoration:none;">
-            <button style="
-                background: linear-gradient(90deg, #ffb300, #ffca28);
-                color: #000;
-                font-weight: bold;
-                font-size: 18px;
-                border: none;
-                border-radius: 14px;
-                padding: 14px 20px 14px 14px;
-                cursor: pointer;
-                box-shadow: 0 6px 20px rgba(255,193,7,0.3);
-                transition: all 0.3s ease;
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-            ">
-                <img src="https://api.cryptojobslist.com/company/logo/weex.jpeg" alt="WEEX" style="width:40px; height:40px; border-radius:4px;">
-                WEEX 70% 永久返佣 立即注册
-            </button>
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown(
-    """
-    <div style="text-align:center; margin:30px 0;">
-        <a href="https://www.weex.com/zh-CN/register?vipCode=panda60" target="_blank" style="text-decoration:none;">
-            <button style="
-                background: linear-gradient(90deg, #ffb300, #ffca28);
-                color: #000;
-                font-weight: bold;
-                font-size: 18px;
-                border: none;
-                border-radius: 14px;
-                padding: 14px 20px 14px 14px;
-                cursor: pointer;
-                box-shadow: 0 6px 20px rgba(255,193,7,0.3);
-                transition: all 0.3s ease;
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-            ">
-                <img src="https://api.cryptojobslist.com/company/logo/weex.jpeg" alt="WEEX" style="width:40px; height:40px; border-radius:4px;">
-                WEEX 70% 永久返佣 立即注册
-            </button>
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+
 
 
 
