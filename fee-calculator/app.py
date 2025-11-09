@@ -180,21 +180,25 @@ st.caption("💎 永久70%比例返佣，算下来费率比币安少一半，无
 # ---------------------------------------------------
 st.markdown(
     """
-    <div style="text-align:center; margin-top: 20px;">
+    <div style="text-align:center; margin:30px 0;">
         <a href="https://www.weex.com/zh-CN/register?vipCode=panda60" target="_blank" style="text-decoration:none;">
             <button style="
                 background: linear-gradient(90deg, #ffb300, #ffca28);
-                color: black;
+                color: #000;
                 font-weight: bold;
+                font-size: 18px;
                 border: none;
-                border-radius: 12px;
-                padding: 12px 30px;
-                font-size: 17px;
+                border-radius: 14px;
+                padding: 14px 20px 14px 14px;
                 cursor: pointer;
-                box-shadow: 0 0 15px rgba(255,193,7,0.4);
-                transition: 0.3s ease-in-out;
+                box-shadow: 0 6px 20px rgba(255,193,7,0.3);
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
             ">
-                👑 WEEX合约 70% 永久返佣！🚀
+                <img src="https://www.weex.com/favicon.ico" alt="WEEX" style="width:20px; height:20px; border-radius:4px;">
+                WEEX 70% 永久返佣 立即注册
             </button>
         </a>
     </div>
