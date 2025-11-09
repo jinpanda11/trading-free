@@ -181,25 +181,23 @@ st.caption("💎 永久70%比例返佣，算下来费率比币安少一半，无
 # ---------------------------------------------------
 # 🔗 外链按钮（带 favicon + 并排 + 动画）
 # ---------------------------------------------------
-st.link_button(
-    "👑 WEEX合约 70% 永久返佣！",
-    "https://www.weex.com/zh-CN/register?vipCode=panda60",
-    use_container_width=True
-)
-st.link_button(
-    "👑 WEEX合约 70% 永久返佣！",
-    "https://www.weex.com/zh-CN/register?vipCode=panda60",
-    use_container_width=True
-)
-st.link_button(
-    "👑 WEEX合约 70% 永久返佣！",
-    "https://www.weex.com/zh-CN/register?vipCode=panda60",
-    use_container_width=True
-)
-st.link_button(
-    "👑 WEEX合约 70% 永久返佣！",
-    "https://www.weex.com/zh-CN/register?vipCode=panda60",
-    use_container_width=True
+uploaded = st.file_uploader("上传按钮图标", type=["png","jpg","ico"])
+
+icon_url = to_base64(uploaded) or "https://www.weex.com/favicon.ico"
+icon_url = f"data:image/png;base64,{icon_url}" if "base64" not in icon_url else icon_url
+
+st.markdown(
+    f"""
+    <div style="text-align:center; margin:30px;">
+        <a href="https://www.weex.com/zh-CN/register?vipCode=panda60" target="_blank">
+            <button style="...">
+                <img src="{icon_url}" style="width:24px;height:24px;border-radius:6px;">
+                WEEX 70% 返佣
+            </button>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
 )
 
 
