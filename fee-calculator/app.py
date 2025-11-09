@@ -197,7 +197,7 @@ st.markdown(
                 align-items: center;
                 gap: 8px;
             ">
-                <img src="https://www.weex.com/zh-CN/register?vipCode=panda60" alt="WEEX" style="width:20px; height:20px; border-radius:4px;">
+                <img src="https://api.cryptojobslist.com/company/logo/weex.jpeg" alt="WEEX" style="width:20px; height:20px; border-radius:4px;">
                 WEEX 70% 永久返佣 立即注册
             </button>
         </a>
@@ -205,4 +205,5 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
