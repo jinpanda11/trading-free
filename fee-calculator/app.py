@@ -149,11 +149,11 @@ st.title("💹 合约手续费计算器")
 col1, col2 = st.columns(2)
 
 with col1:
-    amount = st.number_input("💰 交易金额 ($)", value=1000000.0, step=10000.0, format="%.2f")
-    fee_rate = st.number_input("📈 交易费率 (%)", value=0.02, step=0.001, format="%.3f")
+    amount = st.number_input("💰 交易金额 ($)", value=10000.0, step=10000.0, format="%.2f")
+    fee_rate = st.number_input("📈 交易费率 (%)", value=0.045, step=0.001, format="%.3f")
 
 with col2:
-    rebate_rate = st.number_input("🎁 返佣比例 (%)", value=70.0, step=1.0, format="%.1f")
+    rebate_rate = st.number_input("🎁 返佣比例 (%)", value=0.0, step=1.0, format="%.1f")
 
 fee = amount * (fee_rate / 100)
 rebate = fee * (rebate_rate / 100)
@@ -173,7 +173,7 @@ with c3:
 st.markdown("---")
 
 st.caption("⚡ 实时计算 · 自动检测系统主题 · 响应式布局")
-st.caption("💎 永久70%比例返佣，算下来费率比币安少一半，无需实名认证，一个邮箱注册即可！每天晚上9点自动返前一日手续费，有问题可联系 TG：@panda77581")
+st.caption("💎 WEEX永久70%比例返佣，算下来费率比币安少一半，无需实名认证，一个邮箱注册即可！每天晚上9点自动返前一日手续费，有问题可联系 TG：@panda775431")
 
 # ---------------------------------------------------
 # 🔗 外链按钮
@@ -195,6 +195,52 @@ st.markdown(
                 transition: 0.3s ease-in-out;
             ">
                 👑 WEEX合约 70% 永久返佣！🚀
+            </button>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown(
+    """
+    <div style="text-align:center; margin-top: 20px;">
+        <a href="https://www.bitmart.com/invite/panda80" target="_blank" style="text-decoration:none;">
+            <button style="
+                background: linear-gradient(90deg, #ffb300, #ffca28);
+                color: black;
+                font-weight: bold;
+                border: none;
+                border-radius: 12px;
+                padding: 12px 30px;
+                font-size: 17px;
+                cursor: pointer;
+                box-shadow: 0 0 15px rgba(255,193,7,0.4);
+                transition: 0.3s ease-in-out;
+            ">
+                👑 bitmart 合约80%返佣  不用KYC🚀
+            </button>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown(
+    """
+    <div style="text-align:center; margin-top: 20px;">
+        <a href="https://partner.hdmune.cn/bg/szta6b5l" target="_blank" style="text-decoration:none;">
+            <button style="
+                background: linear-gradient(90deg, #ffb300, #ffca28);
+                color: black;
+                font-weight: bold;
+                border: none;
+                border-radius: 12px;
+                padding: 12px 30px;
+                font-size: 17px;
+                cursor: pointer;
+                box-shadow: 0 0 15px rgba(255,193,7,0.4);
+                transition: 0.3s ease-in-out;
+            ">
+                👑 bitget现货合约各20%返佣🚀
             </button>
         </a>
     </div>
