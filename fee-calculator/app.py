@@ -178,62 +178,26 @@ st.caption("💎 永久70%比例返佣，算下来费率比币安少一半，无
 # ---------------------------------------------------
 # 🔗 外链按钮
 # ---------------------------------------------------
-# ---------------------------------------------------
-# 🔗 外链按钮（带 favicon + 并排 + 动画）
-# ---------------------------------------------------
 st.markdown(
     """
-    <div style="display:flex; gap:12px; justify-content:center; margin:20px 0; flex-wrap:wrap;">
-        <!-- WEEX 按钮 -->
+    <div style="text-align:center; margin-top: 20px;">
         <a href="https://www.weex.com/zh-CN/register?vipCode=panda60" target="_blank" style="text-decoration:none;">
-            <button class="compact-btn weex">
-                <img src="https://www.weex.com/favicon.ico" class="btn-icon"> WEEX 70% 返佣
-            </button>
-        </a>
-        <!-- TG 按钮 -->
-        <a href="https://t.me/panda77581" target="_blank" style="text-decoration:none;">
-            <button class="compact-btn tg">
-                <img src="https://telegram.org/img/t_logo.png" class="btn-icon"> TG 咨询
+            <button style="
+                background: linear-gradient(90deg, #ffb300, #ffca28);
+                color: black;
+                font-weight: bold;
+                border: none;
+                border-radius: 12px;
+                padding: 12px 30px;
+                font-size: 17px;
+                cursor: pointer;
+                box-shadow: 0 0 15px rgba(255,193,7,0.4);
+                transition: 0.3s ease-in-out;
+            ">
+                👑 WEEX合约 70% 永久返佣！🚀
             </button>
         </a>
     </div>
-
-    <style>
-    .compact-btn {
-        font-weight: bold;
-        font-size: 15px;
-        border: none;
-        border-radius: 10px;
-        padding: 9px 14px 9px 10px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    }
-    .btn-icon {
-        width: 17px; height: 17px; border-radius: 4px;
-    }
-    .weex { background: linear-gradient(90deg, #ffb300, #ffca28); color: #000; }
-    .tg { background: linear-gradient(90deg, #229ed9, #40c4ff); color: white; }
-    .compact-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-    }
-    </style>
     """,
     unsafe_allow_html=True
 )
-
-
-
-
-
-
-
-
-
-
-
-
